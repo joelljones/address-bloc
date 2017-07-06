@@ -1,7 +1,8 @@
+# require_relative method loads files using a relative path
 require_relative '../models/entry'
-# #1 The standard first line of an RSpec test file. We are saying that the file is a spec file and that it tests Entry.
+# #1 standard first line of an RSpec test file, says file is a spec file and tests Entry
 RSpec.describe Entry do
-  # #2 Use describe to give our test structure. In this case, we're using it to communicate that the specs test the Entry attributes.
+  # #2 describe gives our test structure, says the specs test the Entry attributes
   describe "attributes" do
    let(:entry) { Entry.new('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com') }
     # #3 Separate individual tests using the it method. Each it represents a unique test.
@@ -31,7 +32,7 @@ RSpec.describe Entry do
     end
   end
 
-  # #5 Use a new describe block to separate the to_s test from the initializer tests. The # in front of to_s indicates that it is an instance method.
+  # #5 new describe block separates the to_s test from the initializer tests & the # means it's an instance method
   describe "#to_s" do
     it "prints an entry as a string" do
       entry = Entry.new('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
